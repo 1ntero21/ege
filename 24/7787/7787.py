@@ -3,7 +3,7 @@ from re import *
 with open('text') as fin:
     s = fin.readline().strip()
 
-pattern = r'(?:AFD[0-9]*)(?:[*+](?:0|[1-9][0-9]*))*'
+pattern = r'(AFD[0-9]*)([*+](0|[1-9][0-9]*))*'
 
 arr = [i.group() for i in finditer(pattern, s)]
 
